@@ -110,7 +110,7 @@ public class Place : MonoBehaviour
         return inside;
     }
 
-    public Vector3[] GetColliderVertexPositions(MeshFilter mesh)
+    public Vector3[] GetColliderVertexPositions(MeshFilter mesh) //<<<<<<<<<<¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ Get 4 corner of the mesh
     {
         Vector3[] vertices = mesh.mesh.vertices;
         Vector3[] output = new Vector3[4];
