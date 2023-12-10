@@ -68,12 +68,10 @@ public class Place : MonoBehaviour
                     {
                         GameManager.gameManagerInstance.points[i, j].GetComponent<MeshRenderer>().material = GameManager.gameManagerInstance.mat[1];
                         GameManager.gameManagerInstance.points[i, j].Isolation();
-                        print("go to Gulag!");
                     }else if (IsPointInPolygon(GetColliderVertexPositions(mesh[1]), GameManager.gameManagerInstance.points[i, j].transform.position))
                     {
                         GameManager.gameManagerInstance.points[i, j].GetComponent<MeshRenderer>().material = GameManager.gameManagerInstance.mat[0];
                         GameManager.gameManagerInstance.points[i, j].RaycastCheck();
-                        print("KSB is checking");
                     }
                 }
             }
@@ -88,7 +86,7 @@ public class Place : MonoBehaviour
     }
 
 
-    public bool IsPointInPolygon(Vector3[] polygon, Vector3 point)
+    public bool IsPointInPolygon(Vector3[] polygon, Vector3 point) // <<<<<<<<<<¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬¬ This code verify if a point is inside the polygon. Check only x and z axis
     {
         int polygonLength = polygon.Length, i = 0;
         bool inside = false;
